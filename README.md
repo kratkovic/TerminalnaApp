@@ -1,0 +1,2 @@
+# TerminalnaApp
+ Zavrsni rad
