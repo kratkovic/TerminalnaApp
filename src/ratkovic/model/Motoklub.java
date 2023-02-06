@@ -8,6 +8,7 @@ public class Motoklub extends Entitet{
 	private boolean registracija;
 	
 	
+	
 	public Motoklub() {
 		super();
 	}
@@ -43,4 +44,3 @@ public class Motoklub extends Entitet{
 		this.registracija = registracija;
 	}
 }
-	
