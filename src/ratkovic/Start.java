@@ -20,9 +20,9 @@ public class Start {
 	public void glavniIzbornik() {
 		System.out.println("");
 		System.out.println("-- GLAVNI IZBORNIK --");
-		System.out.println("   Dostupne opcije");
-		System.out.println("1. Motoklubovi");
-		System.out.println("2. Motodogađaji");
+		System.out.println("  Dostupne opcije");
+		System.out.println("1. Moto klubovi");
+		System.out.println("2. Moto događaji");
 		System.out.println("3. Smještaji");
 		System.out.println("4. Servisi");
 		System.out.println("5. Izlaz iz programa");
