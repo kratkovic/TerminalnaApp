@@ -34,8 +34,8 @@ public class Motoklub extends Entitet{
 	public int getBrojClanova() {
 		return brojClanova;
 	}
-	public void setBrojClanova(int brojClanova) {
-		this.brojClanova = brojClanova;
+	public void setBrojClanova(int string) {
+		this.brojClanova = string;
 	}
 	public boolean isRegistracija() {
 		return registracija;

@@ -22,9 +22,10 @@ public class Motoklubovi {
 
 	private void testPodaci() {
 		
-		motoklubovi.add(new Motoklub(1, "MK Brod", "Slavonski Brod", 180, false));
+		motoklubovi.add(new Motoklub(1, "MK Brod", "Slavonski Brod", 40, true));
 		motoklubovi.add(new Motoklub(2, "MK Osijek", "Osijek", 50, true));
 		motoklubovi.add(new Motoklub(3, "MK Golubica", "Vukovar", 40, true));
+		
 		
 		
 	}
@@ -91,7 +92,7 @@ public class Motoklubovi {
 		Motoklub m = motoklubovi.get(rb-1);
 		m.setNaziv(Pomocno.unosTeksta("Unesite naziv moto kluba: "));
 		m.setMjesto(Pomocno.unosTeksta("Unesite mjesto moto kluba: "));
-		m.setBrojClanova(rb-1);
+		m.setBrojClanova(rb);
 		
 		izbornik();
 		
