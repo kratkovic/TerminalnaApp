@@ -35,4 +35,8 @@ public class Servis extends Entitet {
 		this.radnoVrijeme = radnoVrijeme;
 	}
 	
+	@Override
+	public String toString() {
+		return naziv + ", " +  mjesto + ", " + radnoVrijeme;
+}
 }

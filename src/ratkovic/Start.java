@@ -3,14 +3,17 @@ package ratkovic;
 import java.util.Scanner;
 
 import ratkovic.obrada.Motoklubovi;
+import ratkovic.obrada.Servisi;
 
 public class Start {
 	
 	private Motoklubovi motoklubovi;
+	private Servisi servisi;
 
 	public Start() {
 		Pomocno.ulaz = new Scanner(System.in);
 		motoklubovi = new Motoklubovi(this);
+		servisi = new Servisi(this);
 
 		pozdravnaPoruka();
 		glavniIzbornik();
@@ -34,11 +37,14 @@ public class Start {
 		switch (Pomocno.unosBrojRaspon("Odabrana opcija", 1, 5)) {
 		case 1: 
 			motoklubovi.izbornik();
+		case 4:
+			servisi.izbornik();
 		case 5: {
 			glavniIzbornik();
 			break;
 			
 		}
+		
 		}
 
 	}
@@ -57,4 +63,7 @@ public class Start {
 		new Start();
 
 	}
-}
+
+	
+	}
+

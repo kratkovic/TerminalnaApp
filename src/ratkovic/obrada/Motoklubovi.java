@@ -116,7 +116,7 @@ public class Motoklubovi {
 	}
 
 	private void pregled(boolean prikaziIzbornik) {
-        System.out.println("Moto klubovi u aplikaciji");
+        System.out.println("\nMoto klubovi u aplikaciji");
         int rb = 1;
         for(Motoklub m : motoklubovi) {
         	System.out.println(rb++ + ". " + m);
