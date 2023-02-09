@@ -103,7 +103,7 @@ public class Servisi {
 		s.setNaziv(Pomocno.unosTeksta("Unesite naziv servisa: "));
 		s.setMjesto(Pomocno.unosTeksta("Unesite mjesto servisa: "));
 		s.setRadnoVrijeme("Unesite radno vijeme servisa: ");
-		return null;
+		return s;
 	}
 	
 	private void pregled(boolean prikaziIzbornik) {
