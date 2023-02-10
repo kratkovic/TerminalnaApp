@@ -1,6 +1,7 @@
 package ratkovic.obrada;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import ratkovic.Pomocno;
@@ -22,9 +23,9 @@ public class Smjestaji {
 	}
 
 	private void testPodaci() {
-		smjestaji.add(new Smjestaj(1, "Garten", "Hotel", null, Motodogadjaj));
-		smjestaji.add(new Smjestaj(2, "Guest House Ana", "Apartmani", null, Motodogadjaj));
-		smjestaji.add(new Smjestaj(3, "Vila Rosa", "Apartmani", null, Motodogadjaj));
+		smjestaji.add(new Smjestaj(1, "Garten", "Hotel", null, new Motodogadjaj(1, "Mega bikers susreti", "Poloj", new Date(2000, 11, 21), "Mario Karaš")));
+		smjestaji.add(new Smjestaj(2, "Guest House Ana", "Apartmani", null, new Motodogadjaj(2, "21. Moto susreti", "Tvrđa-katakombe", new Date(2000, 11, 21), "Zdravko Bošnjak")));
+		smjestaji.add(new Smjestaj(3, "Vila Rosa", "Apartmani", null, new Motodogadjaj(3, "15. Moto party", "Dunavska šetnica", new Date(2000, 11, 21), "Damir Kožul")));
 		
 	}
 	public Smjestaji(Start start, List<Smjestaj> smjestaji) {
