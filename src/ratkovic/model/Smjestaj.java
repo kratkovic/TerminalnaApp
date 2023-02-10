@@ -9,7 +9,7 @@ public class Smjestaj extends Entitet{
 	private BigDecimal cijena;
 	private Motodogadjaj motodogadjaj;
 	
-		
+	
 	public Smjestaj() {
 		super();
 	}
@@ -44,6 +44,8 @@ public class Smjestaj extends Entitet{
 	public void setMotodogadjaj(Motodogadjaj motodogadjaj) {
 		this.motodogadjaj = motodogadjaj;
 	}
+	
+		
 	
 	
 	

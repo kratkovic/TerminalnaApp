@@ -5,6 +5,7 @@ import java.util.List;
 
 import ratkovic.Pomocno;
 import ratkovic.Start;
+import ratkovic.model.Motodogadjaj;
 import ratkovic.model.Smjestaj;
 
 public class Smjestaji {
@@ -21,9 +22,9 @@ public class Smjestaji {
 	}
 
 	private void testPodaci() {
-		smjestaji.add(new Smjestaj(1, "Garten", "Hotel", null, null));
-		smjestaji.add(new Smjestaj(2, "Guest House Ana", "Apartmani", null, null));
-		smjestaji.add(new Smjestaj(3, "Vila Rosa", "Apartmani", null, null));
+		smjestaji.add(new Smjestaj(1, "Garten", "Hotel", null, Motodogadjaj));
+		smjestaji.add(new Smjestaj(2, "Guest House Ana", "Apartmani", null, Motodogadjaj));
+		smjestaji.add(new Smjestaj(3, "Vila Rosa", "Apartmani", null, Motodogadjaj));
 		
 	}
 	public Smjestaji(Start start, List<Smjestaj> smjestaji) {

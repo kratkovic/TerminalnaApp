@@ -23,9 +23,9 @@ public class Motodogadjaji {
 
 	private void testPodaci() {
 
-		motodogadjaji.add(new Motodogadjaj(1, "Mega bikers susreti", "Poloj", Date, "Mario Karaš", null));
-		motodogadjaji.add(new Motodogadjaj(2, "21. Moto susreti", "Tvrđa-katakombe", Date, "Zdravko Bošnjak", null));
-		motodogadjaji.add(new Motodogadjaj(3, "15. Moto party", "Dunavska šetnica", Date, "Damir Kožul", null));
+		motodogadjaji.add(new Motodogadjaj(1, "Mega bikers susreti", "Poloj", Date, "Mario Karaš", Motoklub));
+		motodogadjaji.add(new Motodogadjaj(2, "21. Moto susreti", "Tvrđa-katakombe", Date, "Zdravko Bošnjak", Motoklub));
+		motodogadjaji.add(new Motodogadjaj(3, "15. Moto party", "Dunavska šetnica", Date, "Damir Kožul", Motoklub));
 
 	}
 
