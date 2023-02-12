@@ -1,5 +1,8 @@
 package ratkovic;
 
+import java.util.Calendar;
+import java.util.Date;
+import java.util.GregorianCalendar;
 import java.util.Scanner;
 
 public class Pomocno {
@@ -36,5 +39,15 @@ public class Pomocno {
 			return s;
 		}
 	}
+      public static Date kreirajDatum(int dan, int mjesec, int godina) {
+		
+		GregorianCalendar gc = (GregorianCalendar) Calendar.getInstance();
+		gc.set(Calendar.DAY_OF_MONTH, dan);
+		gc.set(Calendar.MONTH, mjesec-1);
+		gc.set(Calendar.YEAR, godina);
+		
+		
+		return gc.getTime();
 
+}
 }

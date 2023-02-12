@@ -1,7 +1,6 @@
 package ratkovic.obrada;
 
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 import ratkovic.Pomocno;
@@ -23,9 +22,9 @@ public class Motodogadjaji {
 
 	private void testPodaci() {
 
-		motodogadjaji.add(new Motodogadjaj(1, "Mega bikers susreti", "Poloj", new Date(14, 5, 2023), "Mario Karaš", new Motoklub(1, "MK Brod", "Slavonski Brod", 40, true)));
-		motodogadjaji.add(new Motodogadjaj(2, "21. Moto susreti", "Tvrđa-katakombe", new Date(26, 6, 2023), "Zdravko Bošnjak", new Motoklub(2, "MK Osijek", "Osijek", 50, true)));
-		motodogadjaji.add(new Motodogadjaj(3, "15. Moto party", "Dunavska šetnica", new Date(28, 8, 2023), "Damir Kožul", new Motoklub(3, "MK Vukovar", "Vukovar", 40, true)));
+		motodogadjaji.add(new Motodogadjaj(1, "Mega bikers susreti", "Poloj", Pomocno.kreirajDatum(14, 5, 2023), "Mario Karaš", new Motoklub(1, "MK Brod", "Slavonski Brod", 40, true)));
+		motodogadjaji.add(new Motodogadjaj(2, "21. Moto susreti", "Tvrđa-katakombe", Pomocno.kreirajDatum(26, 6, 2023), "Zdravko Bošnjak", new Motoklub(2, "MK Osijek", "Osijek", 50, true)));
+		motodogadjaji.add(new Motodogadjaj(3, "15. Moto party", "Dunavska šetnica", Pomocno.kreirajDatum(28, 8, 2023), "Damir Kožul", new Motoklub(3, "MK Vukovar", "Vukovar", 40, true)));
 
 	}
 
