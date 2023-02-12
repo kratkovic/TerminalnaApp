@@ -1,7 +1,6 @@
 package ratkovic.obrada;
 
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 import ratkovic.Pomocno;
@@ -24,9 +23,9 @@ public class Smjestaji {
 	}
 
 	private void testPodaci() {
-		smjestaji.add(new Smjestaj(1, "Garten", "Hotel", null, new Motodogadjaj(1, "Mega bikers susreti", "Poloj", new Date(2000, 11, 21), "Mario Karaš", new Motoklub(1, "MK Brod", "Slavonski Brod", 30, true ))));
-		smjestaji.add(new Smjestaj(2, "Guest House Ana", "Apartmani", null, new Motodogadjaj(2, "21. Moto susreti", "Tvrđa-katakombe", new Date(2000, 11, 21), "Zdravko Bošnjak")));
-		smjestaji.add(new Smjestaj(3, "Vila Rosa", "Apartmani", null, new Motodogadjaj(3, "15. Moto party", "Dunavska šetnica", new Date(2000, 11, 21), "Damir Kožul")));
+		smjestaji.add(new Smjestaj(1, "Garten", "Hotel", null, new Motodogadjaj(1, "Mega bikers susreti", "Poloj", Pomocno.kreirajDatum(14, 5, 2023), "Mario Karaš", new Motoklub(1, "MK Brod", "Slavonski Brod", 100, true ))));
+		smjestaji.add(new Smjestaj(2, "Guest House Ana", "Apartmani", null, new Motodogadjaj(2, "21. Moto susreti", "Tvrđa-katakombe", Pomocno.kreirajDatum(26,5, 2023), "Zdravko Bošnjak", new Motoklub(2, "MK Osijek", "Osijek", 50, true))));
+		smjestaji.add(new Smjestaj(3, "Vila Rosa", "Apartmani", null, new Motodogadjaj(3, "15. Moto party", "Dunavska šetnica", Pomocno.kreirajDatum(28,8,2023), "Damir Kožul", new Motoklub(3, "MK Vukovar", "Vukovar", 40, true))));
 		
 	}
 	public Smjestaji(Start start, List<Smjestaj> smjestaji) {
