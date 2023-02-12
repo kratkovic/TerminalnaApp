@@ -22,7 +22,7 @@ public class Motoklubovi {
 
 	private void testPodaci() {
 		
-		motoklubovi.add(new Motoklub(1, "MK Brod", "Slavonski Brod", 40, true));
+		motoklubovi.add(new Motoklub(1, "MK Brod", "Slavonski Brod", 100, true));
 		motoklubovi.add(new Motoklub(2, "MK Osijek", "Osijek", 50, true));
 		motoklubovi.add(new Motoklub(3, "Vukovar", "Vukovar", 40, true));
 		
