@@ -46,9 +46,12 @@ public class Smjestaj extends Entitet{
 	}
 	
 		
+	@Override
+	public String toString() {
+		return naziv + ", " +  vrsta + ", " + cijena + "€";
 	
 	
-	
+}
 }
 	
 	
