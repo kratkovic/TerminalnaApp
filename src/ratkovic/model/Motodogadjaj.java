@@ -54,9 +54,11 @@ public class Motodogadjaj extends Entitet {
 	}
 	
 	
+	@Override
+	public String toString() {
+		return naziv + ", " +  mjestoOdrzavanja + ", " + datumPocetka ;
 	
 	
-	
-	
+	}
 
 }

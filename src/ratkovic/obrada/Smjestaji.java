@@ -6,7 +6,6 @@ import java.util.List;
 import ratkovic.Pomocno;
 import ratkovic.Start;
 import ratkovic.model.Motodogadjaj;
-import ratkovic.model.Motoklub;
 import ratkovic.model.Servis;
 import ratkovic.model.Smjestaj;
 
@@ -114,5 +113,25 @@ public class Smjestaji {
 		if (prikaziIzbornik) {
 			izbornik();
 		}
+	}
+
+
+	public List<Servis> getServisi() {
+		return servisi;
+	}
+
+
+	public void setServisi(List<Servis> servisi) {
+		this.servisi = servisi;
+	}
+
+
+	public List<Motodogadjaj> getMotodogadjaji() {
+		return motodogadjaji;
+	}
+
+
+	public void setMotodogadjaji(List<Motodogadjaj> motodogadjaji) {
+		this.motodogadjaji = motodogadjaji;
 	}
 }

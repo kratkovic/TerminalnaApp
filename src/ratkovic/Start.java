@@ -2,7 +2,6 @@ package ratkovic;
 
 import java.util.Scanner;
 
-import ratkovic.model.Motodogadjaj;
 import ratkovic.obrada.Motodogadjaji;
 import ratkovic.obrada.Motoklubovi;
 import ratkovic.obrada.Servisi;
@@ -68,6 +67,9 @@ public class Start {
 		switch (Pomocno.unosBrojRaspon("Odabrana opcija: ", 1, 5)) {
 		case 1: 
 			motoklubovi.izbornik();
+			break;
+		case 2:
+			motodogadjaji.izbornik();
 			break;
 		case 3:
 			smjestaji.izbornik();
