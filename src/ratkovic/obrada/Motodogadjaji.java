@@ -13,6 +13,15 @@ public class Motodogadjaji {
 	private List<Motodogadjaj> motodogadjaji;
 	private Start start;
 
+
+	public List<Motodogadjaj> getMotodogadjaji() {
+		return motodogadjaji;
+	}
+
+	public void setMotodogadjaji(List<Motodogadjaj> motodogadjaji) {
+		this.motodogadjaji = motodogadjaji;
+	}
+
 	public Motodogadjaji(Start start) {
 		super();
 		this.start = start;
@@ -114,7 +123,7 @@ public class Motodogadjaji {
 		return d;
 	}
 
-	private void pregled(boolean prikaziIzbornik) {
+	public void pregled(boolean prikaziIzbornik) {
 		 System.out.println("Moto događaji u aplikaciji");
 	        int rb = 1;
 	        for(Motodogadjaj d : motodogadjaji) {

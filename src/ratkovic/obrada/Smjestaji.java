@@ -7,32 +7,30 @@ import ratkovic.Pomocno;
 import ratkovic.Start;
 import ratkovic.model.Motodogadjaj;
 import ratkovic.model.Motoklub;
+import ratkovic.model.Servis;
 import ratkovic.model.Smjestaj;
 
 public class Smjestaji {
 	
 	private List<Smjestaj> smjestaji;
+	private List<Servis> servisi;
+	private List<Motodogadjaj> motodogadjaji;
 	private Start start;
 	
 	public Smjestaji(Start start) {
 		super();
 		this.start = start;
 		smjestaji = new ArrayList<>();
-		testPodaci();
+		
 		
 	}
 
-	private void testPodaci() {
-		smjestaji.add(new Smjestaj(1, "Garten", "Hotel", null, new Motodogadjaj(1, "Mega bikers susreti", "Poloj", Pomocno.kreirajDatum(14, 5, 2023), "Mario Karaš", new Motoklub(1, "MK Brod", "Slavonski Brod", 100, true ))));
-		smjestaji.add(new Smjestaj(2, "Guest House Ana", "Apartmani", null, new Motodogadjaj(2, "21. Moto susreti", "Tvrđa-katakombe", Pomocno.kreirajDatum(26,5, 2023), "Zdravko Bošnjak", new Motoklub(2, "MK Osijek", "Osijek", 50, true))));
-		smjestaji.add(new Smjestaj(3, "Vila Rosa", "Apartmani", null, new Motodogadjaj(3, "15. Moto party", "Dunavska šetnica", Pomocno.kreirajDatum(28,8,2023), "Damir Kožul", new Motoklub(3, "MK Vukovar", "Vukovar", 40, true))));
-		
-	}
+	
 	public Smjestaji(Start start, List<Smjestaj> smjestaji) {
 		super();
 		this.smjestaji = smjestaji;
 		this.start = start;
-		testPodaci();
+	
 }
 
 	public void izbornik() {
@@ -52,7 +50,7 @@ public class Smjestaji {
 			pregled(true);
 			break;
 		case 2:
-			unosNovog();
+			unesiNoviSmjestaj();
 			break;
 		case 3:
 			if(smjestaji.size()==0) {
@@ -90,18 +88,22 @@ public class Smjestaji {
 		
 	}
 	
-	private void unosNovog() {
-		smjestaji.add(unesiNoviSmjestaj());
-		izbornik();
-	}
+	
 
-	private Smjestaj unesiNoviSmjestaj() {
+
+	private void unesiNoviSmjestaj() {
+		
 		Smjestaj sm = new Smjestaj();
 		sm.setSifra(Pomocno.unosBrojRaspon("Unesite šifru smještaja", 0, Integer.MAX_VALUE));
 		sm.setNaziv(Pomocno.unosTeksta("Unesite naziv smještaja: "));
 		sm.setVrsta(Pomocno.unosTeksta("Unesite vrstu smještaja: "));
+		start.getMotodogadjaji().pregled(false);
+		int i = Pomocno.unosBrojRaspon("Odaberite moto događaj", 1, start.getMotodogadjaji().getMotodogadjaji().size());
+		sm.setMotodogadjaj(start.getMotodogadjaji().getMotodogadjaji().get(i-1));
+		izbornik();
+		smjestaji.add(sm);
+		izbornik();
 		
-		return sm;
 	}
 	private void pregled(boolean prikaziIzbornik) {
 		System.out.println("Smještaji u aplikaciji");

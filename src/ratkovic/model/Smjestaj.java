@@ -1,6 +1,7 @@
 package ratkovic.model;
 
 import java.math.BigDecimal;
+import java.util.List;
 
 public class Smjestaj extends Entitet{
 	
@@ -8,17 +9,27 @@ public class Smjestaj extends Entitet{
 	private String vrsta;
 	private BigDecimal cijena;
 	private Motodogadjaj motodogadjaj;
+	private List<Servis> servisi;
 	
 	
+	public List<Servis> getServisi() {
+		return servisi;
+	}
+	public void setServisi(List<Servis> servisi) {
+		this.servisi = servisi;
+	}
 	public Smjestaj() {
 		super();
 	}
-	public Smjestaj(int sifra, String naziv, String vrsta, BigDecimal cijena, Motodogadjaj motodogadjaj) {
+
+	public Smjestaj(int sifra, String naziv, String vrsta, BigDecimal cijena, Motodogadjaj motodogadjaj,
+			List<Servis> servisi) {
 		super(sifra);
 		this.naziv = naziv;
 		this.vrsta = vrsta;
 		this.cijena = cijena;
 		this.motodogadjaj = motodogadjaj;
+		this.servisi = servisi;
 	}
 	public String getNaziv() {
 		return naziv;
