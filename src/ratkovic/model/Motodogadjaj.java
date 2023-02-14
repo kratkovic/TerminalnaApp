@@ -1,5 +1,6 @@
 package ratkovic.model;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Motodogadjaj extends Entitet {
@@ -56,7 +57,9 @@ public class Motodogadjaj extends Entitet {
 	
 	@Override
 	public String toString() {
-		return naziv + ", " +  mjestoOdrzavanja + ", " + datumPocetka ;
+		SimpleDateFormat dateFormat = new SimpleDateFormat("dd.MM.yyyy");
+	    String formatiraniDatum = dateFormat.format(datumPocetka);
+	    return naziv + ", " +  mjestoOdrzavanja + ", " + formatiraniDatum;
 	
 	
 	}

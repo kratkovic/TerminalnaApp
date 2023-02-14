@@ -2,6 +2,7 @@ package ratkovic;
 
 import java.text.DateFormat;
 import java.text.Format;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
@@ -47,12 +48,18 @@ public class Pomocno {
     	gc.set(Calendar.DAY_OF_MONTH, dan);
     	gc.set(Calendar.MONTH, mjesec - 1);
     	gc.set(Calendar.YEAR, godina);
-    	 SimpleDateFormat noviFormat = new SimpleDateFormat("dd.MM.yyyy");
-         String formatiraniDatum = noviFormat.format(gc.getTime());
-
-         System.out.println(formatiraniDatum);
-    	
-    	return gc.getTime();
+    	gc.set(Calendar.HOUR_OF_DAY, 0);
+        gc.set(Calendar.MINUTE, 0);
+        gc.set(Calendar.SECOND, 0);
+        gc.set(Calendar.MILLISECOND, 0);
+    	Date datum = gc.getTime();
+        SimpleDateFormat dateFormat = new SimpleDateFormat("dd.MM.yyyy");
+        String formatiraniDatum = dateFormat.format(datum);
+        try {
+            return dateFormat.parse(formatiraniDatum);
+        } catch (ParseException e) {
+            return datum;
         
+}
 }
 }
