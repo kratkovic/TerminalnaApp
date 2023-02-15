@@ -91,16 +91,23 @@ public class Smjestaji {
 
 	private void unesiNoviSmjestaj() {
 		
-		
-		 Smjestaj sm = new Smjestaj();
+		List<Smjestaj> smjestaji = new ArrayList<>();
+		boolean unosNovogSmjestaja = true;
+		while (unosNovogSmjestaja) {
+		    Smjestaj sm = new Smjestaj();
 		    sm.setSifra(Pomocno.unosBrojRaspon("Unesite šifru smještaja", 0, Integer.MAX_VALUE));
 		    sm.setNaziv(Pomocno.unosTeksta("Unesite naziv smještaja: "));
 		    sm.setVrsta(Pomocno.unosTeksta("Unesite vrstu smještaja: "));
 		    sm.setCijena(Pomocno.unosCijene("Unesite cijenu smještaja: "));
-		    int i = Pomocno.unosBrojRaspon("Odaberite moto događaj: ", 1, start.getMotodogadjaji().getMotodogadjaji().size());
-		    sm.setMotodogadjaj(start.getMotodogadjaji().getMotodogadjaji().get(i-1));
+		    int j = Pomocno.unosBrojRaspon("Odaberite moto događaj: ", 1, start.getMotodogadjaji().getMotodogadjaji().size());
+		    sm.setMotodogadjaj(start.getMotodogadjaji().getMotodogadjaji().get(j-1));
 		    smjestaji.add(sm);
-		    izbornik();
+
+		    String odgovor = Pomocno.unosTeksta("Želite li unijeti još smještaja? (da/ne)");
+		    unosNovogSmjestaja = odgovor.equalsIgnoreCase("da");
+		}
+
+		izbornik();
 		
 	}
 	private void pregled(boolean prikaziIzbornik) {
