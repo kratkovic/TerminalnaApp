@@ -1,7 +1,6 @@
 package ratkovic;
 
-import java.text.DateFormat;
-import java.text.Format;
+import java.math.BigDecimal;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -59,7 +58,19 @@ public class Pomocno {
             return dateFormat.parse(formatiraniDatum);
         } catch (ParseException e) {
             return datum;
-        
+        }     
 }
+    public static BigDecimal unosCijene(String poruka) {
+        System.out.println(poruka);
+        BigDecimal cijena = null;
+        while (cijena == null) {
+            String unos = ulaz.nextLine();
+            try {
+                cijena = new BigDecimal(unos);
+            } catch (NumberFormatException ex) {
+                System.out.println("Neispravan unos. Molimo unesite ponovo: ");
+            }
+        }
+        return cijena;
 }
 }

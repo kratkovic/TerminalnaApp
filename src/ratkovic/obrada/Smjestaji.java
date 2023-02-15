@@ -82,7 +82,6 @@ public class Smjestaji {
 		Smjestaj sm = smjestaji.get(rb-1);
 		sm.setNaziv("Unesite naziv smještaja: ");
 		sm.setVrsta("Unesite vrstu smještaja: ");
-		sm.setCijena(null);
 		izbornik();
 		
 	}
@@ -92,16 +91,16 @@ public class Smjestaji {
 
 	private void unesiNoviSmjestaj() {
 		
-		Smjestaj sm = new Smjestaj();
-		sm.setSifra(Pomocno.unosBrojRaspon("Unesite šifru smještaja", 0, Integer.MAX_VALUE));
-		sm.setNaziv(Pomocno.unosTeksta("Unesite naziv smještaja: "));
-		sm.setVrsta(Pomocno.unosTeksta("Unesite vrstu smještaja: "));
-		start.getMotodogadjaji().pregled(false);
-		int i = Pomocno.unosBrojRaspon("Odaberite moto događaj", 1, start.getMotodogadjaji().getMotodogadjaji().size());
-		sm.setMotodogadjaj(start.getMotodogadjaji().getMotodogadjaji().get(i-1));
-		izbornik();
-		smjestaji.add(sm);
-		izbornik();
+		
+		 Smjestaj sm = new Smjestaj();
+		    sm.setSifra(Pomocno.unosBrojRaspon("Unesite šifru smještaja", 0, Integer.MAX_VALUE));
+		    sm.setNaziv(Pomocno.unosTeksta("Unesite naziv smještaja: "));
+		    sm.setVrsta(Pomocno.unosTeksta("Unesite vrstu smještaja: "));
+		    sm.setCijena(Pomocno.unosCijene("Unesite cijenu smještaja: "));
+		    int i = Pomocno.unosBrojRaspon("Odaberite moto događaj: ", 1, start.getMotodogadjaji().getMotodogadjaji().size());
+		    sm.setMotodogadjaj(start.getMotodogadjaji().getMotodogadjaji().get(i-1));
+		    smjestaji.add(sm);
+		    izbornik();
 		
 	}
 	private void pregled(boolean prikaziIzbornik) {
