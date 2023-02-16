@@ -24,7 +24,6 @@ public class Smjestaji {
 		
 	}
 
-	
 	public Smjestaji(Start start, List<Smjestaj> smjestaji) {
 		super();
 		this.smjestaji = smjestaji;
