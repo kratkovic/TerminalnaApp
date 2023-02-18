@@ -6,7 +6,8 @@ public class Servis extends Entitet {
 	private String mjesto;
 	private String radnoVrijeme;
 	
-		
+	
+	
 	public Servis() {
 		super();
 	}

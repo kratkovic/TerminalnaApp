@@ -29,6 +29,7 @@ public class Motodogadjaji {
 		testPodaci();
 	}
 
+	
 	private void testPodaci() {
 
 		motodogadjaji.add(new Motodogadjaj(1, "Mega bikers susreti", "Poloj", Pomocno.kreirajDatum(14, 5, 2023), "Mario Karaš", new Motoklub(1, "MK Brod", "Slavonski Brod", 40, true)));
