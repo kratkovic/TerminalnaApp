@@ -23,6 +23,7 @@ public class Motodogadjaj extends Entitet {
 		this.odgovorniClan = odgovorniClan;
 		this.motoklub = motoklub;
 	}
+	
 	public String getNaziv() {
 		return naziv;
 	}
