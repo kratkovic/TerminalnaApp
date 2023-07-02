@@ -35,7 +35,7 @@ public class Servisi {
 	
 	public void izbornik() {
 		System.out.println("");
-		System.out.println("-- Izbornik Servisi --");
+		System.out.println("--- Izbornik Servisi ---");
 		System.out.println("1. Pregled svih servisa");
 		System.out.println("2. Unos novog servisa");
 		System.out.println("3. Promjena postojećeg servisa");
